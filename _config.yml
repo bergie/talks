@@ -1,0 +1,2 @@
+permalink: /:year/:title
+markdown: rdiscount
