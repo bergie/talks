@@ -1,0 +1,18 @@
+---
+tags:
+  - vie
+  - rdfa
+---
+<h3>Suddenly JavaScript can understand</h3>
+<pre>
+var bookId = 'http://example.net/b/wikinomics';
+var v = new VIE();
+v.use(new v.RdfaService());
+v.load({ element: 'body'}).
+  using('rdfa').
+  execute().
+  done(function () {
+    var myBook = <mark>v.entities.get(bookId)</mark>;
+    alert(<mark>myBook.get('dc:title')</mark>);
+    // Says "Wikinomics"
+  });

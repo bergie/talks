@@ -1,0 +1,12 @@
+---
+---
+<h3>Launching Create.js</h3>
+<pre>
+jQuery(document).ready(function () {
+  jQuery('body')<mark>.midgardCreate</mark>({
+    url: function () {
+      return '/my/api/endpoint/' +
+             this.getSubjectUri();
+    }
+  }
+});
