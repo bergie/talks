@@ -16,10 +16,19 @@
 {% endfor %}
 
 <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
+<link href='http://fonts.googleapis.com/css?family=Kotta+One' rel='stylesheet'>
 
 <style>
-  html, .view body { background-color: black; counter-reset: slideidx; }
-  body, .view section { background-color: white; border-radius: 12px }
+  html, .view body {
+    background-color: black;
+    color: white;
+    counter-reset: slideidx;
+  }
+ 
+  body, .view section {
+    background-color: black;
+    color: white;
+  }
 
   section, .view head > title {
       font-family: 'Cantarell', arial, serif;
@@ -58,6 +67,13 @@
   }
 
   blockquote {
+    font-family: 'Kotta One', serif;
+    display: box;
+    display: -moz-box;
+    display: -webkit-box;
+    box-align:center;
+    -moz-box-align: center;
+    -webkit-box-align: center;
     height: 100%;
     background-color: black;
     color: white;
@@ -95,8 +111,6 @@
     width: 100%;
     padding: 40px;
     text-align: right;
-    background-color: #F3F4F8;
-    border-top: 1px solid #CCC;
   }
 
   /* Transition effect */
