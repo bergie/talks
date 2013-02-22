@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Editing with Create.js</title>
+    <script src="./deps/jquery-1.7.1.min.js"></script>
+    <script src="./deps/jquery-ui-1.8.18.custom.min.js"></script>
+    <script src="./deps/underscore-min.js"></script>
+    <script src="./deps/backbone-min.js"></script>
+    <script src="./deps/vie-min.js"></script>
+    <script src="./deps/jquery.tagsinput.min.js"></script>
+    <script src="./deps/rangy-core-1.2.3.js"></script>
+    <script src="./deps/hallo-min.js"></script>
+    <script src="./create-min.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./themes/create-ui/css/create-ui.css">
+    <link rel="stylesheet" href="./themes/midgard-notifications/midgardnotif.css">
+    <link rel="stylesheet" href="./demo.css">
+    <script>
+      jQuery(document).ready(function () {
+        jQuery('body').midgardCreate({
+          url: function () {
+            return 'javascript:false;';
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="row">
+      <div class="span6" about="one">
+        <h1 property="dcterms:title">Hello world</h1>
+      </div>
+      <div class="span6" about="two">
+        <p>Some more stuff</p>
+      </div>
+    </div>
+  </body>
+</html>
