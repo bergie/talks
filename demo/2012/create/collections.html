@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Collections with Create.js</title>
+    <script src="./deps/jquery-1.7.1.min.js"></script>
+    <script src="./deps/jquery-ui-1.8.18.custom.min.js"></script>
+    <script src="./deps/underscore-min.js"></script>
+    <script src="./deps/backbone-min.js"></script>
+    <script src="./deps/vie-min.js"></script>
+    <script src="./deps/jquery.tagsinput.min.js"></script>
+    <script src="./deps/rangy-core-1.2.3.js"></script>
+    <script src="./deps/hallo-min.js"></script>
+    <script src="./create-min.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../assets/font-awesome/css/font-awesome.css">
+    <link rel="stylesheet" href="./themes/create-ui/css/create-ui.css">
+    <link rel="stylesheet" href="./themes/midgard-notifications/midgardnotif.css">
+    <link rel="stylesheet" href="./demo.css">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <script type="text/html" id="SectionText">
+      <section typeof="Text" about="">
+      <div property="content"></div>
+      </section>
+    </script>
+    <script type="text/html" id="SectionQuote">
+      <section typeof="Quote" about="">
+      <blockquote property="quote"></blockquote>
+      <p property="citation"></p>
+      </section>
+    </script>
+    <script>
+      jQuery(document).ready(function () {
+        // Use a custom VIE instance so that we can feed it our type information
+        var vie = new VIE();
+        vie.use(new vie.RdfaService());
+
+        vie.types.add('Text', [
+        {
+          id: 'content',
+          range: 'Text',
+          min: 1,
+          max: 1
+        }
+        ]);
+
+        vie.types.add('Quote', [
+        {
+          id: 'quote',
+          range: 'Text',
+          min: 1,
+          max: 1
+        },
+        {
+          id: 'citation',
+          range: 'SimpleText',
+          min: 0,
+          max: 1
+        }
+        ]);
+
+        vie.types.add('Page', [
+        {
+          id: 'title',
+          range: 'SimpleText',
+          min: 1,
+          max: 1
+        },
+        {
+          id: 'author',
+          range: 'PersonName',
+          min: 0,
+          max: -1
+        },
+        {
+          id: 'section',
+          range: ['Text', 'Quote'],
+          min: 0,
+          max: 3
+        }
+        ]);
+
+        vie.service('rdfa').setTemplate('Text', 'section', jQuery('#SectionText').html());
+        vie.service('rdfa').setTemplate('Quote', 'section', jQuery('#SectionQuote').html());
+
+        jQuery('body').midgardCreate({
+          vie: vie,
+          url: function () {
+            return 'javascript:false;';
+          }
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <div class="container" about="http://createjs.org/" typeof="Page">
+      <div class="row">
+        <div class="span6">
+          <h2>Latest news</h2>
+          <div rel="news" rev="newsAbout">
+            <div about="http://bergie.iki.fi/blog/createjs-in-2013/">
+              <h3 property="dcterms:title">Create.js in 2013</h3>
+              <p property="description">This post outlines the current state of Create, and some of the things that will be happening around it in 2013.</p>
+            </div>
+            <div about="http://bergie.iki.fi/blog/createjs-vie-in-cmss-interview/">
+              <h3 property="dcterms:title">Interview: Create.js and VIE in CMSs</h3>
+              <p property="description">
+                The PHPmagazin interview was published in German. For the more international audience, I received permission from the author to publish the English version here on my blog
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="span6">
+          <h2>What our clients say</h2>
+          <div rel="section" rev="sectionOf">
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
