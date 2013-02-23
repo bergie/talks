@@ -1,0 +1,32 @@
+---
+layout: page
+title: Presentation slides
+presentations:
+  -
+    event: jQuery Europe 2013
+    url: 2013/jquery-europe
+---
+<div class="masthead">
+  <div class="pull-right">
+    <a class="btn" href="https://github.com/bergie/slides"><i class="icon-github"></i> Slide sources</a>
+  </div>
+  <h2>Henri Bergius</h2>
+</div>
+<div class="hero-unit">
+  <h1>{{ page.title }}</h1>
+  <p class="lead">
+  This page contains the collection of my presentation slides. Slides for conferences before February 2013 can be found <a href="http://slideshare.net/bergie">from SlideShare</a>.
+  </p>
+</div>
+<div class="row">
+  {% for presentation in page.presentations %}
+      <div class="span6">
+        <h3>{{ presentation.event }}</h3>
+        <iframe src="./shells/embedder.html#../{{ presentation.url }}" width="460" height="345"></iframe>
+        <div>
+          <a class="btn btn-small" href="./shells/onstage.html#../{{ presentation.url }}">Presentation mode</a>
+          <a class="btn btn-small" href="./{{ presentation.url }}">Permalink</a>
+        </div>
+      </div>
+  {% endfor %}
+</div>
