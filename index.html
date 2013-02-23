@@ -17,8 +17,26 @@ presentations:
 <div class="hero-unit">
   <h1>{{ page.title }}</h1>
   <p class="lead">
-  This page contains the collection of my presentation slides. Slides for conferences before February 2013 can be found <a href="http://slideshare.net/bergie">from SlideShare</a>.
+    I talk in many developer conferences on subjects like <em>decoupled content management</em> and <em>location-aware applications</em>, as well as
+    open source software I've written like the <a href="http://createjs.org/">Create.js</a> inline editing toolkit and the <a href="http://noflojs.org/">NoFlo</a>
+    flow-based programming engine.
   </p>
+</div>
+<div class="row">
+  <div class="span12">
+    <div class="pull-right thumbnail">
+      <img src="http://bergie.iki.fi/style/img/mdpi/bergie.jpg" alt="Henri Bergius">
+      <div>
+        <a href="http://bergie.iki.fi/style/img/orig/bergie.jpg">full size photo</a>
+      </div>
+    </div>
+    <h2>Want me to speak in your event?</h2>
+    <p>I'm happy to come and talk in developer conferences. If you'd like to have me in your event, <a href="mailto:henri.bergius@iki.fi">get in touch</a>.</p>
+    <p>
+      <a href="http://bergie.iki.fi/about/" class="btn"><i class="icon-info-sign"></i> Speaker bio</a>
+      <a href="http://twitter.com/bergie" class="btn"><i class="icon-twitter"></i> @bergie</a>
+    </p>
+  </div>
 </div>
 <div class="row">
   {% for presentation in page.presentations %}
@@ -31,6 +49,9 @@ presentations:
         </div>
       </div>
   {% endfor %}
+  <p class="span12">
+  This page contains the collection of my presentation slides. Slides for conferences before February 2013 can be found <a href="http://slideshare.net/bergie">from SlideShare</a>.
+  </p>
 </div>
 <footer class="footer">
   <p>Layout powered by <a href="http://bootswatch.com/">Bootswatch</a>.</p>
