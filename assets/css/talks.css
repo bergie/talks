@@ -1,0 +1,14 @@
+body.main div.hero-unit {
+  background-image: url('../2013/guadec-wide.png');
+  background-position: right top;
+  background-repeat: no-repeat;
+}
+
+body.main div.hero-unit p.lead {
+  margin-top: 60px;
+}
+
+footer {
+  display: block;
+  margin-top: 40px;
+}

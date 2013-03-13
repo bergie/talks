@@ -1,23 +1,36 @@
 ---
 layout: page
-title: Presentation slides
+title: Conference talks
+class: main
 presentations:
   -
     event: jQuery Europe 2013
     url: 2013/jquery-europe
 ---
 <div class="masthead">
-  <div class="pull-right">
-    <a class="btn" href="https://github.com/bergie/talks"><i class="icon-github"></i> Slide sources</a>
-  </div>
-  <h2>Henri Bergius</h2>
+  <h2><a href="http://bergie.iki.fi/">Henri Bergius</a></h2>
 </div>
 <div class="hero-unit">
   <h1>{{ page.title }}</h1>
   <p class="lead">
-  This page contains the collection of my presentation slides. Slides for conferences before February 2013 can be found <a href="http://slideshare.net/bergie">from SlideShare</a>.
+    I talk in many developer conferences on subjects like <em>decoupled content management</em> and <em>location-aware applications</em>, as well as
+    open source software I've written like the <a href="http://createjs.org/">Create.js</a> inline editing toolkit and the <a href="http://noflojs.org/">NoFlo</a>
+    flow-based programming engine.
   </p>
 </div>
+  <div class="span5 pull-right well">
+    <div class="pull-right">
+      <a href="http://bergie.iki.fi/style/img/orig/bergie.jpg"><img src="http://bergie.iki.fi/style/img/mdpi/bergie.jpg" alt="Henri Bergius"></a>
+    </div>
+    <h3>Want me to speak in your event?</h3>
+    <p>I'm happy to come and talk in developer conferences and meetups, especially in Europe. If you'd like to have me in your event, <a href="mailto:henri.bergius@iki.fi">get in touch</a>.</p>
+    <p>
+      <a href="http://bergie.iki.fi/about/" class="btn"><i class="icon-info-sign"></i> Speaker bio</a>
+      <a href="http://bergie.iki.fi/style/img/orig/bergie.jpg" class="btn"><i class="icon-user"></i> Photo</a>
+      <a class="btn" href="http://bergie.iki.fi"><i class="icon-home"></i> Blog</a>
+      <a href="http://twitter.com/bergie" class="btn"><i class="icon-twitter"></i> @bergie</a>
+    </p>
+  </div>
 <div class="row">
   {% for presentation in page.presentations %}
       <div class="span6">
@@ -29,4 +42,10 @@ presentations:
         </div>
       </div>
   {% endfor %}
+  <p class="span12">
+  This page contains the collection of my presentation slides. Slides for conferences before February 2013 can be found <a href="http://slideshare.net/bergie">from SlideShare</a>.
+  </p>
 </div>
+<footer class="footer">
+  <p>Layout powered by <a href="http://bootswatch.com/">Bootswatch</a>. Sources for the slides can be found from <a href="http://github.com/bergie/talks">GitHub</a>
+</footer>
