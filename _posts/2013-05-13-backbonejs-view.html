@@ -1,0 +1,23 @@
+---
+class: longcode
+---
+<h3>Backbone.js &mdash; Views</h3>
+<pre>
+// Define a view
+var CityView = Backbone.Model.extend({
+  initialize: function () {
+    this.listenTo(this.model, 'change', this.render);
+  },
+  render: function () {
+    this.$el.html(this.model.get('name') + ', ' + this.model.get('country'));
+    return this;
+  }
+});
+
+// Instantiate
+var amsView = new CityView({
+  model: amsterdam
+});
+
+// Render to DOM
+$('body').append(amsView.render().el);

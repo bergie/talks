@@ -1,0 +1,24 @@
+---
+class: longcode
+---
+<h3>Backbone.js &mdash; Models</h3>
+<pre>
+// define a model
+var City = Backbone.Model.extend({
+  url: function () {
+    return '/cities/' + this.id;
+  },
+  defaults: {
+    country: 'Germany'
+  }
+});
+
+// Instantiate
+var amsterdam = new City({ name: 'Amsterdam', id: 'amsterdam'});
+
+// Update
+amsterdam.set('country', 'The Netherlands');
+
+// Save to server
+amsterdam.save();
+// HTTP PUT /cities/amsterdam

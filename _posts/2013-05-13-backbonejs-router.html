@@ -1,0 +1,25 @@
+---
+class: longcode
+---
+<h3>Backbone.js &mdash; Routers</h3>
+<pre>
+// Define a router
+var Router = Backbone.Router.extend({
+  routes: {
+    'city/:id': 'city'
+  },
+  city: function (id) {
+    var city = new City({ id: id });
+    // Load from server and draw
+    city.fetch({
+      success: function () {
+        var view = new CityView({ model: city });
+        $('body').html(view.render().el);
+      }
+    });
+  }
+});
+
+// Instantiate and run
+var myRouter = new Router();
+Backbone.history.start();
