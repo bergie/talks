@@ -1,0 +1,13 @@
+---
+---
+<h3><code>template.html</code></h3>
+<pre>
+&lt;div class="dialog"&gt;
+  &lt;h1&gt;&lt;%= title %&gt;&lt;/h1&gt;
+  &lt;ul class="actions"&gt;
+    &lt;% _.each(actions, function(action, label) { %&gt;
+    &lt;li&gt;&lt;button id="&lt;%= label %&gt;"&gt;&lt;%= label %&gt;&lt;/button&gt;&lt;/li&gt;
+    &lt;% }); %&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>

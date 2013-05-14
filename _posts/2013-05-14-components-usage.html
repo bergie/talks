@@ -1,0 +1,19 @@
+---
+---
+<h3>Using the Dialog component</h3>
+<pre>
+// Import the dialog component
+var Dialog = <mark>require('dialog').Dialog;</mark>
+
+// Initialize a dialog with the options we wanted
+var dialog = new Dialog({
+  title: 'Hello, world!',
+  actions: {
+    'Yes': function () { alert("CLICKED YES"); },
+    'No': function () { alert("CLICKED NO"); }
+  }
+});
+
+// Render and place to DOM
+container.appendChild(dialog.render().el);
+</pre>

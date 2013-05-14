@@ -1,0 +1,33 @@
+---
+class: longcode
+---
+<h4><code>index.js</code></h4>
+<pre>
+// Import dependencies, e.g. "import antigravity"
+<mark>var View = require('backbone-view');</mark>
+var _ = require('underscore');
+
+// Register our public API via exports
+<mark>exports.Dialog = View.extend({</mark>
+  template: require('./template.js'),
+  attrs: {},
+  events: {
+    'click .actions button': 'clickAction'
+  },
+
+  initialize: function (options) {
+    this.attrs.title = options.title;
+    this.attrs.actions = options.actions;
+  },
+
+  clickAction: function (event) {
+    var action = event.target.id;
+    this.attrs.actions[action]();
+  },
+
+  render: function () {
+    this.$el.html(_.template(this.template, this.attrs));
+    return this;
+  }
+});
+</pre>

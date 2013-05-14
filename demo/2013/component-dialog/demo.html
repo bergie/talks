@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Dialog demo</title>
+    <script src="build/build.js"></script>
+    <link rel="stylesheet" href="../../../assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="build/build.css">
+  </head>
+  <body>
+    <div class="container">
+      <h2>Press the button below</h2>
+      <button class="btn btn-large" id="show">Click me</button>
+      <div class="dialogs"></div>
+    </div>
+    <script>
+      var button = document.querySelector('#show');
+      var container = document.querySelector('.dialogs');
+      button.addEventListener('click', function () {
+
+        // Import the dialog component
+        var Dialog = require('dialog').Dialog;
+
+        // Initialize a dialog with the options we wanted
+        var dialog = new Dialog({
+          title: 'Hello, world!',
+          actions: {
+            'Yes': function () { alert("CLICKED YES"); },
+            'No': function () { alert("CLICKED NO"); }
+          }
+        });
+
+        // Render and place to DOM
+        container.appendChild(dialog.render().el);
+      });
+    </script>
+  </body>
+</html>
