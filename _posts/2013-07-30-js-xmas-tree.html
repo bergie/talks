@@ -1,0 +1,16 @@
+---
+---
+<h3>Callback Christmas Tree</h3>
+{% highlight javascript %}
+asncFunction1(function(err, result) {
+  asncFunction2(function(err, result) {
+    asncFunction3(function(err, result) {
+      asncFunction4(function(err, result) {
+        asncFunction5(function(err, result) {
+          // do something useful
+        })
+      })
+    })
+  })
+});
+{% endhighlight %}

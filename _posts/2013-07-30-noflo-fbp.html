@@ -1,0 +1,15 @@
+---
+class: longcode
+---
+<h4>Defining flows</h4>
+{% highlight coffeescript %}
+# Pass requests to the HTTP query parser
+Server(webserver/Server) REQUEST -> IN ParseQuery(webserver/Query)
+# Parse request body as well
+ParseQuery() OUT -> IN ParseBody(webserver/BodyParser)
+# Start routing
+ParseBody() OUT -> IN Receiver(woute/Receiver)
+Receiver() URL -> IN UrlSplit(Split)
+UrlSplit() OUT -> IN StringifyUrl(woute/StringifyUrl)
+StringifyUrl() OUT -> GROUP GroupConnection(groups/Group)
+{% endhighlight %}

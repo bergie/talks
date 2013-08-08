@@ -1,0 +1,10 @@
+---
+class: shortcode
+---
+<h3>Unix shell &#8594; FBP in 1D</h3>
+{% highlight bash %}
+$ ps -ef | grep firefox \
+  | grep -v grep \
+  | awk '{print $2}' \
+  | xargs kill -9
+{% endhighlight %}

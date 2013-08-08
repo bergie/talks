@@ -1,0 +1,10 @@
+---
+class: shortcode
+---
+<h3>Starting up the network</h3>
+{% highlight javascript %}
+var graph = 'somefile.json';
+noflo.loadFile(graph, function (network) {
+  console.log('Network is now running!');
+});
+{% endhighlight %}
