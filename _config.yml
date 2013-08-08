@@ -1,2 +1,2 @@
 permalink: /:year/:title
-markdown: rdiscount
+markdown: redcarpet
