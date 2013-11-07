@@ -23,6 +23,24 @@ a {
   padding: 0px;
 }
 
+.slide blockquote {
+  font-style: italic;
+  font-size: 30pt;
+}
+.slide blockquote cite {
+  font-style: normal;
+  font-size: 20pt;
+}
+.slide blockquote cite:before {
+  content: "\2014";
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+.slide blockquote:before {
+  content: '\201C';
+}
+
 section.shortcode,
 section.code,
 section.longcode {

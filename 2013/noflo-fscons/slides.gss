@@ -61,10 +61,12 @@
   padding-bottom: 10px;
 }
 
-#drawfbp-img[height] == #drawfbp-img[intrinsic-height];
+#drawfbp-img[height] == #drawfbp-img[intrinsic-height] !weak;
 #drawfbp-img[width] == #drawfbp-img[intrinsic-width] !weak;
-#drawfbp-img[center-y] == #drawfbp[center-y];
+#drawfbp-img[center-y] == #drawfbp[center-y] !weak;
 #drawfbp-img[center-x] == #drawfbp[center-x];
+#drawfbp-img[top] >= #drawfbp[top];
+#drawfbp-img[bottom] <= #drawfbp[bottom];
 #drawfbp-text[bottom] == #drawfbp[bottom] - 100;
 #drawfbp-text[center-x] == #drawfbp[center-x];
 #drawfbp-text[width] == #drawfbp[width];
@@ -108,9 +110,39 @@
 #fbp[left] == 0;
 #fbp {
   background-image: url('../../assets/2013/paul-morrison.jpg');
-  background-size: auto 100%;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top right;
+}
+
+#alankay-quote[height] == #alankay-quote[intrinsic-height];
+#alankay-quote[width] == #alankay[width] / 2;
+#alankay-quote[left] == #alankay[center-x] !weak;
+#alankay-quote[center-y] == #alankay[center-y] - #alankay[height] / 4 !weak;
+#alankay-quote[top] >= #alankay[top] + 10;
+#alankay-quote[right] <= #alankay[right] - 20;
+#alankay[left] == 0;
+#alankay {
+  background-image: url('../../assets/2013/alan-kay.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#unixphilosophy-quote[height] == #unixphilosophy-quote[intrinsic-height];
+#unixphilosophy-quote[width] == #unixphilosophy[width] / 2;
+#unixphilosophy-quote[center-x] == #unixphilosophy[center-x];
+#unixphilosophy-quote[center-y] == #unixphilosophy[center-y];
+#unixphilosophy[left] == 0;
+#unixphilosophy {
+  background-image: url('../../assets/2013/usenix.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+#unixphilosophy-quote {
+  background-color: hsla(180, 11%, 11%, 0.95);
+  padding: 10px;
 }
 
 #meemoo-img[height] == #meemoo[height];
@@ -161,7 +193,7 @@
   background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: top center;
-  background-color: #000000;
+  background-color: #ffffff;
 }
 
 #theflo {
@@ -191,7 +223,7 @@
 
 #noflo-ipad {
   background-image: url('../../assets/2013/noflo-ipad.png');
-  background-size: 100% auto;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
 }
