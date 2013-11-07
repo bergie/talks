@@ -1,0 +1,19 @@
+{
+  "name": "talks",
+  "version": "0.0.0",
+  "homepage": "https://github.com/bergie/talks",
+  "authors": [
+    "Henri Bergius <henri.bergius@iki.fi>"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "gss": "git://github.com/the-gss/gss.git#gh-pages"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

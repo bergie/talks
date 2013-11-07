@@ -1,0 +1,59 @@
+/* vim: set filetype=css: */
+.slide[width] == ::window[width];
+.slide[height] == ::window[height];
+
+@vertical .slide gap(10);
+
+#cover-img[center-x] == #cover[center-x];
+#cover-img[center-y] == #cover[center-y];
+#cover-img[width] == #cover[width] / 2;
+#cover-img[height] == #cover[height] / 1.5;
+#cover-text[center-x] == #cover[center-x];
+#cover-text[top] == #cover[height] / 1.4;
+#cover-text[width] == #cover-text[intrinsic-width];
+#cover-text[height] == #cover-text[intrinsic-height];
+
+.bergie-link[bottom] == #bergie[bottom];
+.bergie-link[width] == #bergie[width] / 3;
+.bergie-link[height] == #bergie[height] / 5;
+@horizontal .bergie-link;
+#bergie {
+  background-image: url('http://bergie.iki.fi/about/pictures/amsterdam.jpg');
+  background-height: 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #000000;
+}
+
+#bergie ul li {
+  list-style: none;
+  text-align: center;
+  background-color: hsla(180, 11%, 11%, 0.5);
+  font-size: 20pt;
+  padding-top: 30px;
+}
+
+#grail-img[height] == #grail[height];
+#grail-img[width] == #grail[width];
+#grail-img[top] == #grail[top];
+#grail-img[center-x] == #grail[center-x];
+#grail-text[top] == #grail[top] + 100;
+#grail-text[center-x] == #grail[center-x];
+#grail-text[width] == #grail-text[intrinsic-width];
+#grail-text[height] == #grail-text[intrinsic-height];
+
+#puredata-img[height] == #puredata[height];
+#puredata-img[width] == #puredata[width];
+#puredata-img[top] == #puredata[top];
+#puredata-img[center-x] == #puredata[center-x];
+#puredata-text[top] == #puredata[top] + 100;
+#puredata-text[center-x] == #puredata[center-x];
+#puredata-text[width] == #puredata[width];
+#puredata-text[height] == #puredata-text[intrinsic-height];
+#puredata-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}

@@ -1,0 +1,27 @@
+body {
+  margin: 0px;
+  padding: 0px;
+  background-color: hsl(180, 11%, 11%);
+  color: hsl(180, 11%, 99%);
+  font-family: 'Cantarell', arial, serif;
+}
+
+a {
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.slide {
+  background-color: hsl(180, 11%, 11%);
+  color: hsl(180, 11%, 99%);
+}
+
+.slide h1 {
+  z-index: 1;
+  font-size: 30pt;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
