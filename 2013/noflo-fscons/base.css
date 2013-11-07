@@ -19,6 +19,8 @@ a {
 .slide h1 {
   z-index: 1;
   font-size: 30pt;
+  margin: 0px;
+  padding: 0px;
 }
 
 section.shortcode,

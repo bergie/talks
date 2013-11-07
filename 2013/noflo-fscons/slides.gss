@@ -100,6 +100,19 @@
   padding-bottom: 10px;
 }
 
+#fbp-book[height] == #fbp-book[intrinsic-height];
+#fbp-book[width] == #fbp-book[intrinsic-width];
+#fbp-book[right] == #fbp[center-x];
+#fbp-book[center-y] == #fbp[center-y];
+#fbp-book[left] >= 10;
+#fbp[left] == 0;
+#fbp {
+  background-image: url('../../assets/2013/paul-morrison.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
 #meemoo-img[height] == #meemoo[height];
 #meemoo-img[width] == #meemoo[width];
 #meemoo-img[top] == #meemoo[top];
@@ -137,9 +150,15 @@
 #xmas-code[center-y] == #xmas[center-y];
 #xmas[left] == 0;
 
+#unixpipe-code[width] == #unixpipe-code[intrinsic-width];
+#unixpipe-code[height] == #unixpipe-code[intrinsic-height];
+#unixpipe-code[center-x] == #unixpipe[center-x];
+#unixpipe-code[center-y] == #unixpipe[center-y];
+#unixpipe[left] == 0;
+
 #underground {
   background-image: url('../../assets/2013/underground-map.png');
-  background-size: 100% auto;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #000000;
@@ -151,4 +170,35 @@
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #000000;
+}
+
+#noflo-kickstarter {
+  background-image: url('../../assets/2013/noflo-kickstarter-finished.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #ecf0e9;
+}
+
+#why-now-text[width] == #why-now-text[intrinsic-width];
+#why-now-text[height] == #why-now-text[intrinsic-height];
+#why-now-text[center-x] == #why-now[center-x];
+#why-now-text[center-y] == #why-now[center-y];
+#why-now[left] == 0;
+#why-now-text {
+  font-size: 40pt;
+}
+
+#noflo-ipad {
+  background-image: url('../../assets/2013/noflo-ipad.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#roadtrip {
+  background-image: url('../../assets/2013/noflo-california-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
 }
