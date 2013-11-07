@@ -19,7 +19,7 @@
 @horizontal .bergie-link;
 #bergie {
   background-image: url('http://bergie.iki.fi/about/pictures/amsterdam.jpg');
-  background-height: 100%;
+  background-size: auto 100%;
   background-repeat: no-repeat;
   background-position: top center;
   background-color: #000000;
@@ -59,4 +59,32 @@
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+#drawfbp-img[height] == #drawfbp-img[intrinsic-height];
+#drawfbp-img[width] == #drawfbp-img[intrinsic-width] !weak;
+#drawfbp-img[center-y] == #drawfbp[center-y];
+#drawfbp-img[center-x] == #drawfbp[center-x];
+#drawfbp-text[bottom] == #drawfbp[bottom] - 100;
+#drawfbp-text[center-x] == #drawfbp[center-x];
+#drawfbp-text[width] == #drawfbp[width];
+#drawfbp-text[height] == #drawfbp-text[intrinsic-height];
+#drawfbp[left] == 0;
+#drawfbp {
+  background-color: #ffffff;
+}
+#drawfbp-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#theflo {
+  background-image: url('../../assets/2013/theflo.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #000000;
 }

@@ -68,6 +68,11 @@
     window.addEventListener('hashchange', function (event) {
       processHash(event.newURL);
     });
+    window.addEventListener('resize', function (event) {
+      setTimeout(function () {
+        window.scrollTo(0, slides[currentSlide].offsetTop);
+      }, 500);
+    });
     document.addEventListener('keydown', function (event) {
       if (event.keyCode === 38) {
         event.preventDefault();
