@@ -193,6 +193,22 @@
 #unixpipe-code[center-y] == #unixpipe[center-y];
 #unixpipe[left] == 0;
 
+#fbp2d-text[width] == #fbp2d-text[intrinsic-width];
+#fbp2d-text[height] == #fbp2d-text[intrinsic-height];
+#fbp2d-text[center-x] == #fbp2d[width] / 3 * 2;
+#fbp2d-text[bottom] == #fbp2d[bottom] - #fbp2d[height] / 4;
+#fbp2d[left] == 0;
+#fbp2d {
+  background-image: url('../../assets/2013/noflo-calc.png');
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #2a2b30;
+}
+#fbp2d-text {
+  text-shadow: 0px 0px 10px #2a2b30;
+}
+
 #underground {
   background-image: url('../../assets/2013/underground-map.png');
   background-size: auto 100%;
