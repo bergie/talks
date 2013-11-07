@@ -46,14 +46,12 @@
       processHash(window.location.hash);
     }, 1000);
     function processHash(hash) {
-      console.log(hash);
       var parts = hash.split('#');
       if (parts.length < 2) {
         return;
       }
       currentSlide = parseInt(parts[1]);
       if (isNaN(currentSlide)) {
-        console.log(currentSlide);
         window.location.hash = '#0';
         return;
       }
