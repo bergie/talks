@@ -12,6 +12,9 @@
 #cover-text[top] == #cover[height] / 1.4;
 #cover-text[width] == #cover-text[intrinsic-width];
 #cover-text[height] == #cover-text[intrinsic-height];
+#cover-text {
+  text-align: center;
+}
 
 .bergie-link[bottom] == #bergie[bottom];
 .bergie-link[width] == #bergie[width] / 3;
@@ -31,6 +34,8 @@
   background-color: hsla(180, 11%, 11%, 0.5);
   font-size: 20pt;
   padding-top: 30px;
+  overflow: hidden;
+  white-space: nowrap;
 }
 
 #grail-img[height] == #grail[height];
@@ -64,9 +69,11 @@
 #drawfbp-img[height] == #drawfbp-img[intrinsic-height] !weak;
 #drawfbp-img[width] == #drawfbp-img[intrinsic-width] !weak;
 #drawfbp-img[center-y] == #drawfbp[center-y] !weak;
-#drawfbp-img[center-x] == #drawfbp[center-x];
+#drawfbp-img[center-x] == #drawfbp[center-x] !weak;
 #drawfbp-img[top] >= #drawfbp[top];
 #drawfbp-img[bottom] <= #drawfbp[bottom];
+#drawfbp-img[left] >= #drawfbp[left];
+#drawfbp-img[right] <= #drawfbp[right] !strong;
 #drawfbp-text[bottom] == #drawfbp[bottom] - 100;
 #drawfbp-text[center-x] == #drawfbp[center-x];
 #drawfbp-text[width] == #drawfbp[width];
@@ -103,7 +110,7 @@
 }
 
 #fbp-book[height] == #fbp-book[intrinsic-height] !weak;
-#fbp-book[width] == #fbp-book[intrinsic-width];
+#fbp-book[width] == #fbp-book[intrinsic-width] !weak;
 #fbp-book[right] == #fbp[center-x];
 #fbp-book[center-y] == #fbp[center-y] !weak;
 #fbp-book[top] >= #fbp[top];
@@ -122,7 +129,7 @@
 #alankay-quote[left] == #alankay[center-x] !weak;
 #alankay-quote[center-y] == #alankay[center-y] - #alankay[height] / 4 !weak;
 #alankay-quote[top] >= #alankay[top] + 10;
-#alankay-quote[right] <= #alankay[right] - 20;
+#alankay-quote[right] <= #alankay[right] - 20 !weak;
 #alankay[left] == 0;
 #alankay {
   background-image: url('../../assets/2013/alan-kay.png');
