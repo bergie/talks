@@ -46,7 +46,7 @@
 #puredata-img[width] == #puredata[width];
 #puredata-img[top] == #puredata[top];
 #puredata-img[center-x] == #puredata[center-x];
-#puredata-text[top] == #puredata[top] + 100;
+#puredata-text[bottom] == #puredata[bottom] - 100;
 #puredata-text[center-x] == #puredata[center-x];
 #puredata-text[width] == #puredata[width];
 #puredata-text[height] == #puredata-text[intrinsic-height];
