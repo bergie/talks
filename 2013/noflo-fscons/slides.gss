@@ -282,6 +282,9 @@
 #noflo-gesture-demo[center-x] == #noflo-gesture[center-x];
 #noflo-gesture-demo[center-y] == #noflo-gesture[center-y];
 #noflo-gesture[left] == 0;
+#noflo-gesture {
+  background-color: #1c1c1c;
+}
 #noflo-gesture-demo {
   border: none;
   transform: scale(.8);
