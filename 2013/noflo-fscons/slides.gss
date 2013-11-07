@@ -2,7 +2,7 @@
 .slide[width] == ::window[width];
 .slide[height] == ::window[height];
 
-@vertical .slide gap(10);
+@vertical .slide gap(0);
 
 #cover-img[center-x] == #cover[center-x];
 #cover-img[center-y] == #cover[center-y];
@@ -21,7 +21,7 @@
   background-image: url('http://bergie.iki.fi/about/pictures/amsterdam.jpg');
   background-height: 100%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: top center;
   background-color: #000000;
 }
 
@@ -50,6 +50,9 @@
 #puredata-text[center-x] == #puredata[center-x];
 #puredata-text[width] == #puredata[width];
 #puredata-text[height] == #puredata-text[intrinsic-height];
+#puredata {
+  background-color: #ffffff;
+}
 #puredata-text {
   color: #ffffff;
   background-color: hsla(180, 11%, 11%, 0.8);
