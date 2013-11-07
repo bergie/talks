@@ -262,3 +262,45 @@
   background-repeat: no-repeat;
   background-position: top left;
 }
+
+#noflo-clock-demo[width] == #noflo-clock[width] - 40;
+#noflo-clock-demo[height] == #noflo-clock[height] - 40;
+#noflo-clock-demo[center-x] == #noflo-clock[center-x];
+#noflo-clock-demo[center-y] == #noflo-clock[center-y];
+#noflo-clock[left] == 0;
+#noflo-clock {
+  background-color: #2a2b30;
+}
+#noflo-clock-demo {
+  border: none;
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+}
+
+#noflo-gesture-demo[width] == #noflo-gesture[width] - 40;
+#noflo-gesture-demo[height] == #noflo-gesture[height] - 40;
+#noflo-gesture-demo[center-x] == #noflo-gesture[center-x];
+#noflo-gesture-demo[center-y] == #noflo-gesture[center-y];
+#noflo-gesture[left] == 0;
+#noflo-gesture-demo {
+  border: none;
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+}
+
+#website-text[bottom] == #website[bottom] - 100;
+#website-text[center-x] == #website[center-x];
+#website-text[width] == #website[width];
+#website-text[height] == #website-text[intrinsic-height];
+#website[left] == 0;
+#website {
+  background-image: url('../../assets/2013/noflo-website.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+#website-text {
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding: 10px;
+}
