@@ -102,10 +102,12 @@
   padding-bottom: 10px;
 }
 
-#fbp-book[height] == #fbp-book[intrinsic-height];
+#fbp-book[height] == #fbp-book[intrinsic-height] !weak;
 #fbp-book[width] == #fbp-book[intrinsic-width];
 #fbp-book[right] == #fbp[center-x];
-#fbp-book[center-y] == #fbp[center-y];
+#fbp-book[center-y] == #fbp[center-y] !weak;
+#fbp-book[top] >= #fbp[top];
+#fbp-book[bottom] <= #fbp[bottom];
 #fbp-book[left] >= 10;
 #fbp[left] == 0;
 #fbp {
@@ -129,10 +131,12 @@
   background-position: top right;
 }
 
-#unixphilosophy-quote[height] == #unixphilosophy-quote[intrinsic-height];
+#unixphilosophy-quote[height] == #unixphilosophy-quote[intrinsic-height] !weak;
 #unixphilosophy-quote[width] == #unixphilosophy[width] / 2;
 #unixphilosophy-quote[center-x] == #unixphilosophy[center-x];
 #unixphilosophy-quote[center-y] == #unixphilosophy[center-y];
+#unixphilosophy-quote[top] >= #unixphilosophy[top];
+#unixphilosophy-quote[bottom] <= #unixphilosophy[bottom];
 #unixphilosophy[left] == 0;
 #unixphilosophy {
   background-image: url('../../assets/2013/usenix.jpg');
@@ -143,6 +147,7 @@
 #unixphilosophy-quote {
   background-color: hsla(180, 11%, 11%, 0.95);
   padding: 10px;
+  font-size: 20pt;
 }
 
 #meemoo-img[height] == #meemoo[height];

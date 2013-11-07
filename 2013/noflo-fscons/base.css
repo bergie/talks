@@ -4,6 +4,7 @@ body {
   background-color: hsl(180, 11%, 11%);
   color: hsl(180, 11%, 99%);
   font-family: 'Cantarell', arial, serif;
+  user-select: none;
 }
 
 a {
