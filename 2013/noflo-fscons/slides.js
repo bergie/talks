@@ -2,21 +2,17 @@
   var currentSlide = 0;
   function previous(slides) {
     currentSlide--;
-    if (currentSlide <= 0) {
-      currentSlide = 0;
-    }
-    scroll(slides[currentSlide]);
+    window.location.hash = '#' + currentSlide;
   }
   function next(slides) {
     currentSlide++;
-    if (currentSlide >= slides.length) {
-      currentSlide = slides.length - 1;
-    }
-    scroll(slides[currentSlide]);
+    window.location.hash = '#' + currentSlide;
   };
+  var scrolling = false;
+  var to;
   function scroll(slide) {
     var from = window.scrollY;
-    var to = slide.offsetTop;
+    to = slide.offsetTop;
     var step = Math.floor(Math.abs(to - from) / 10);
     var scrollStep = function () {
       var next;
@@ -24,12 +20,14 @@
         next = from - step;
         if (next <= to) {
           window.scrollTo(0, to);
+          scrolling = false;
           return;
         }
       } else {
         next = from + step;
         if (next > to) {
           window.scrollTo(0, to);
+          scrolling = false;
           return;
         }
       }
@@ -39,9 +37,39 @@
     };
     window.requestAnimationFrame(scrollStep);
   };
-
   document.addEventListener("DOMContentLoaded", function(event) {
     var slides = document.querySelectorAll('section.slide');
+    if (!window.location.hash) {
+      window.location.hash = '#0';
+    }
+    setTimeout(function () {
+      processHash(window.location.hash);
+    }, 1000);
+    function processHash(hash) {
+      console.log(hash);
+      var parts = hash.split('#');
+      if (parts.length < 2) {
+        return;
+      }
+      currentSlide = parseInt(parts[1]);
+      if (isNaN(currentSlide)) {
+        console.log(currentSlide);
+        window.location.hash = '#0';
+        return;
+      }
+      if (currentSlide >= slides.length) {
+        window.location.hash = '#' + (slides.length - 1);
+        return;
+      }
+      if (currentSlide < 0) {
+        window.location.hash = '#0';
+        return;
+      }
+      scroll(slides[currentSlide]);
+    };
+    window.addEventListener('hashchange', function (event) {
+      processHash(event.newURL);
+    });
     document.addEventListener('keydown', function (event) {
       if (event.keyCode === 38) {
         event.preventDefault();
