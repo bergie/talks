@@ -46,7 +46,7 @@
 #puredata-img[width] == #puredata[width];
 #puredata-img[top] == #puredata[top];
 #puredata-img[center-x] == #puredata[center-x];
-#puredata-text[bottom] == #puredata[bottom] - 100;
+#puredata-text[top] == #puredata[top] + 100;
 #puredata-text[center-x] == #puredata[center-x];
 #puredata-text[width] == #puredata[width];
 #puredata-text[height] == #puredata-text[intrinsic-height];
@@ -79,6 +79,70 @@
   text-align: center;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+#labview-img[height] == #labview-img[intrinsic-height];
+#labview-img[width] == #labview-img[intrinsic-width] !weak;
+#labview-img[center-y] == #labview[center-y];
+#labview-img[center-x] == #labview[center-x];
+#labview-text[bottom] == #labview[bottom] - 100;
+#labview-text[center-x] == #labview[center-x];
+#labview-text[width] == #labview[width];
+#labview-text[height] == #labview-text[intrinsic-height];
+#labview[left] == 0;
+#labview {
+  background-color: #ffffff;
+}
+#labview-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#meemoo-img[height] == #meemoo[height];
+#meemoo-img[width] == #meemoo[width];
+#meemoo-img[top] == #meemoo[top];
+#meemoo-img[center-x] == #meemoo[center-x];
+#meemoo-text[top] == #meemoo[top] + 100;
+#meemoo-text[center-x] == #meemoo[center-x];
+#meemoo-text[width] == #meemoo[width];
+#meemoo-text[height] == #meemoo-text[intrinsic-height];
+#meemoo {
+  background-color: #ffffff;
+}
+#meemoo-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#cr-code[width] == #cr-code[intrinsic-width];
+#cr-code[height] == #cr-code[intrinsic-height];
+#cr-code[center-x] == #cr[center-x];
+#cr-code[center-y] == #cr[center-y];
+#cr[left] == 0;
+
+#cps-code[width] == #cps-code[intrinsic-width];
+#cps-code[height] == #cps-code[intrinsic-height];
+#cps-code[center-x] == #cps[center-x];
+#cps-code[center-y] == #cps[center-y];
+#cps[left] == 0;
+
+#xmas-code[width] == #xmas-code[intrinsic-width];
+#xmas-code[height] == #xmas-code[intrinsic-height];
+#xmas-code[center-x] == #xmas[center-x];
+#xmas-code[center-y] == #xmas[center-y];
+#xmas[left] == 0;
+
+#underground {
+  background-image: url('../../assets/2013/underground-map.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #000000;
 }
 
 #theflo {

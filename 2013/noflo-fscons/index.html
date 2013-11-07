@@ -28,17 +28,64 @@
         <li class="bergie-link"><a href="http://twitter.com/bergie"><i class="icon-twitter-sign"></i> bergie</a></li>
       </ul>
     </section>
+    <section class="slide shortcode" id="cr">
+      <div id="cr-code">
+      <h1>Call-Return</h1>
+      <div class="highlight">
+      <pre><code class="javascript"><span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">someFunction</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+<span class="c1">// Here we wait until this completes</span>
+      </code></pre>
+      </div>
+    </div>
+    </section>
+    <section class="slide shortcode" id="cps">
+      <div id="cps-code">
+    <h1>Continuation Passing Style</h1>
+    <div class="highlight"><pre><code class="javascript"><span class="nx">someFunction</span><span class="p">(</span><span class="nx">param</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Our callback gets called once the</span>
+  <span class="c1">// function completes</span>
+<span class="p">});</span>
+</code></pre></div>
+      </div>
+    </section>
+    <section class="slide code" id="xmas">
+      <div id="xmas-code">
+      <h1>Callback Christmas Tree</h1>
+    <div class="highlight"><pre><code class="javascript"><span class="nx">asncFunction1</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">asncFunction2</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">asncFunction3</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">asncFunction4</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">asncFunction5</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// do something useful</span>
+        <span class="p">})</span>
+      <span class="p">})</span>
+    <span class="p">})</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div>
+      </div>
+    </section>
+    <section class="slide" id="underground">
+    </section>
     <section class="slide" id="grail">
-      <h1 id="grail-text">Graphical Input Language (1960s)</h1>
-      <img src="../../assets/2013/grail.png" id="grail-img">
+    <h1 id="grail-text">Graphical Input Language (1960s)</h1>
+    <img src="../../assets/2013/grail.png" id="grail-img">
+    </section>
+    <section class="slide" id="labview">
+    <h1 id="labview-text">LabVIEW (1980s)</h1>
+    <img src="../../assets/2013/labview.gif" id="labview-img">
     </section>
     <section class="slide" id="puredata">
-      <h1 id="puredata-text">Pure Data (1990s)</h1>
-      <img src="../../assets/2013/puredata.jpg" id="puredata-img">
+    <h1 id="puredata-text">Pure Data (1990s)</h1>
+    <img src="../../assets/2013/puredata.jpg" id="puredata-img">
     </section>
     <section class="slide" id="drawfbp">
-      <h1 id="drawfbp-text">DrawFBP (2000s)</h1>
-      <img src="../../assets/2013/drawfbp.png" id="drawfbp-img">
+    <h1 id="drawfbp-text">DrawFBP (2000s)</h1>
+    <img src="../../assets/2013/drawfbp.png" id="drawfbp-img">
+    </section>
+    <section class="slide" id="meemoo">
+    <h1 id="meemoo-text">Meemoo (2010s)</h1>
+    <img src="../../assets/2013/meemoo.png" id="meemoo-img">
     </section>
     <section class="slide" id="theflo">
     </section>
