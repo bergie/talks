@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>NoFlo</title>
+    <script>
+      window.GSS_CONFIG = {
+        workerURL: '../../bower_components/gss/dist/worker.min.js'
+      };
+    </script>
+    <link rel="stylesheet" href="./slides.gss" type="text/gss" />
+    <link rel="stylesheet" href="./base.css" type="text/css" />
+    <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
+    <link href="../../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../bower_components/gss/dist/gss.js"></script>
+    <script src="./slides.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" />
+  </head>
+  <body>
+    <section class="slide" id="cover">
+      <h1 id="cover-text">Flow-Based Programming for JavaScript</h1>
+      <img id="cover-img" src="../../assets/2013/noflo-white.svg" />
+    </section>
+    <section class="slide" id="bergie">
+      <ul>
+        <li class="bergie-link"><a href="http://bergie.iki.fi"><i class="icon-home"></i> bergie.iki.fi</a></li>
+        <li class="bergie-link"><a href="http://github.com/bergie/"><i class="icon-github"></i> bergie</a></li>
+        <li class="bergie-link"><a href="http://twitter.com/bergie"><i class="icon-twitter-sign"></i> bergie</a></li>
+      </ul>
+    </section>
+    <section class="slide shortcode" id="cr">
+      <div id="cr-code">
+      <h1>Call-Return</h1>
+      <div class="highlight">
+      <pre><code class="javascript"><span class="kd">var</span> <span class="nx">value</span> <span class="o">=</span> <span class="nx">someFunction</span><span class="p">(</span><span class="nx">param</span><span class="p">);</span>
+<span class="c1">// Here we wait until this completes</span>
+      </code></pre>
+      </div>
+    </div>
+    </section>
+    <section class="slide shortcode" id="cps">
+      <div id="cps-code">
+    <h1>Continuation Passing Style</h1>
+    <div class="highlight"><pre><code class="javascript"><span class="nx">someFunction</span><span class="p">(</span><span class="nx">param</span><span class="p">,</span> <span class="kd">function</span> <span class="p">(</span><span class="nx">value</span><span class="p">)</span> <span class="p">{</span>
+  <span class="c1">// Our callback gets called once the</span>
+  <span class="c1">// function completes</span>
+<span class="p">});</span>
+</code></pre></div>
+      </div>
+    </section>
+    <section class="slide code" id="xmas">
+      <div id="xmas-code">
+      <h1>Callback Christmas Tree</h1>
+    <div class="highlight"><pre><code class="javascript"><span class="nx">asncFunction1</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nx">asncFunction2</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+    <span class="nx">asncFunction3</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+      <span class="nx">asncFunction4</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+        <span class="nx">asncFunction5</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">err</span><span class="p">,</span> <span class="nx">result</span><span class="p">)</span> <span class="p">{</span>
+          <span class="c1">// do something useful</span>
+        <span class="p">})</span>
+      <span class="p">})</span>
+    <span class="p">})</span>
+  <span class="p">})</span>
+<span class="p">});</span>
+</code></pre></div>
+      </div>
+    </section>
+    <section class="slide" id="underground">
+    </section>
+    <section class="slide" id="roadtrip">
+    </section>
+    <section class="slide" id="fbp">
+      <img id="fbp-book" src="../../assets/2013/fbp-book.png">
+    </section>
+    <section class="slide" id="alankay">
+      <blockquote id="alankay-quote">
+        I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages <cite>Alan Kay</cite>
+      </blockquote>
+    </section>
+    <section class="slide" id="unixphilosophy">
+      <blockquote id="unixphilosophy-quote">
+        This is the Unix philosophy:<br />Write programs that do one thing and do it well.<br />Write programs to work together.<br />Write programs to handle text streams, because that is a universal interface.
+      </blockquote>
+    </section>
+    <section class="slide shortcode" id="unixpipe">
+      <div id="unixpipe-code">
+      <h1>Unix shell &#8594; FBP in 1D</h1>
+<div class="highlight"><pre><code class="bash"><span class="nv">$ </span>ps -ef | grep firefox <span class="se">\</span>
+  | grep -v grep <span class="se">\</span>
+  | awk <span class="s1">&#39;{print $2}&#39;</span> <span class="se">\</span>
+  | xargs <span class="nb">kill</span> -9
+</code></pre></div>
+      </div>
+    </section>
+    <section class="slide" id="fbp2d">
+      <h1 id="fbp2d-text">FBP in 2D</h1>
+    </section>
+    <section class="slide" id="grail">
+      <h1 id="grail-text">Graphical Input Language (1960s)</h1>
+      <img src="../../assets/2013/grail.png" id="grail-img">
+    </section>
+    <section class="slide" id="labview">
+      <h1 id="labview-text">LabVIEW (1980s)</h1>
+      <img src="../../assets/2013/labview.gif" id="labview-img">
+    </section>
+    <section class="slide" id="puredata">
+      <h1 id="puredata-text">Pure Data (1990s)</h1>
+      <img src="../../assets/2013/puredata.jpg" id="puredata-img">
+    </section>
+    <section class="slide" id="drawfbp">
+      <h1 id="drawfbp-text">DrawFBP (2000s)</h1>
+      <img src="../../assets/2013/drawfbp.png" id="drawfbp-img">
+    </section>
+    <section class="slide" id="meemoo">
+      <h1 id="meemoo-text">Meemoo (2010s)</h1>
+      <img src="../../assets/2013/meemoo.png" id="meemoo-img">
+    </section>
+    <section class="slide" id="why-now">
+      <h1 id="why-now-text">Why now?</h1>
+    </section>
+    <section class="slide" id="noflo-ipad">
+    </section>
+    <section class="slide" id="noflo-kickstarter">
+    </section>
+    <section class="slide" id="noflo-clock">
+      <iframe id="noflo-clock-demo" src="http://noflojs.org/noflo-ui/#example/6699161"></iframe>
+    </section>
+    <section class="slide" id="theflo">
+    </section>
+    <section class="slide" id="website">
+      <h1 id="website-text"><a href="http://noflojs.org">noflojs.org</a></h1>
+    </section>
+  </body>
+</html>

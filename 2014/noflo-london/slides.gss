@@ -1,0 +1,309 @@
+/* vim: set filetype=css: */
+.slide[width] == ::window[width];
+.slide[height] == ::window[height];
+
+@vertical .slide gap(0);
+
+#cover-img[center-x] == #cover[center-x];
+#cover-img[center-y] == #cover[center-y];
+#cover-img[width] == #cover[width] / 2;
+#cover-img[height] == #cover[height] / 1.5;
+#cover-text[center-x] == #cover[center-x];
+#cover-text[top] == #cover[height] / 1.4;
+#cover-text[width] == #cover-text[intrinsic-width];
+#cover-text[height] == #cover-text[intrinsic-height];
+#cover-text {
+  text-align: center;
+}
+
+.bergie-link[bottom] == #bergie[bottom];
+.bergie-link[width] == #bergie[width] / 3;
+.bergie-link[height] == #bergie[height] / 5;
+@horizontal .bergie-link;
+#bergie {
+  background-image: url('http://bergie.iki.fi/about/pictures/amsterdam.jpg');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #000000;
+}
+
+#bergie ul li {
+  list-style: none;
+  text-align: center;
+  background-color: hsla(180, 11%, 11%, 0.5);
+  font-size: 20pt;
+  padding-top: 30px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#grail-img[height] == #grail[height];
+#grail-img[width] == #grail[width];
+#grail-img[top] == #grail[top];
+#grail-img[center-x] == #grail[center-x];
+#grail-text[top] == #grail[top] + 100;
+#grail-text[center-x] == #grail[center-x];
+#grail-text[width] == #grail-text[intrinsic-width];
+#grail-text[height] == #grail-text[intrinsic-height];
+
+#puredata-img[height] == #puredata[height];
+#puredata-img[width] == #puredata[width];
+#puredata-img[top] == #puredata[top];
+#puredata-img[center-x] == #puredata[center-x];
+#puredata-text[top] == #puredata[top] + 100;
+#puredata-text[center-x] == #puredata[center-x];
+#puredata-text[width] == #puredata[width];
+#puredata-text[height] == #puredata-text[intrinsic-height];
+#puredata {
+  background-color: #ffffff;
+}
+#puredata-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#drawfbp-img[height] == #drawfbp-img[intrinsic-height] !weak;
+#drawfbp-img[width] == #drawfbp-img[intrinsic-width] !weak;
+#drawfbp-img[center-y] == #drawfbp[center-y] !weak;
+#drawfbp-img[center-x] == #drawfbp[center-x] !weak;
+#drawfbp-img[top] >= #drawfbp[top];
+#drawfbp-img[bottom] <= #drawfbp[bottom];
+#drawfbp-img[left] >= #drawfbp[left];
+#drawfbp-img[right] <= #drawfbp[right] !strong;
+#drawfbp-text[bottom] == #drawfbp[bottom] - 100;
+#drawfbp-text[center-x] == #drawfbp[center-x];
+#drawfbp-text[width] == #drawfbp[width];
+#drawfbp-text[height] == #drawfbp-text[intrinsic-height];
+#drawfbp[left] == 0;
+#drawfbp {
+  background-color: #ffffff;
+}
+#drawfbp-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#labview-img[height] == #labview-img[intrinsic-height];
+#labview-img[width] == #labview-img[intrinsic-width] !weak;
+#labview-img[center-y] == #labview[center-y];
+#labview-img[center-x] == #labview[center-x];
+#labview-text[bottom] == #labview[bottom] - 100;
+#labview-text[center-x] == #labview[center-x];
+#labview-text[width] == #labview[width];
+#labview-text[height] == #labview-text[intrinsic-height];
+#labview[left] == 0;
+#labview {
+  background-color: #ffffff;
+}
+#labview-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#fbp-book[height] == #fbp-book[intrinsic-height] !weak;
+#fbp-book[width] == #fbp-book[intrinsic-width] !weak;
+#fbp-book[right] == #fbp[center-x];
+#fbp-book[center-y] == #fbp[center-y] !weak;
+#fbp-book[top] >= #fbp[top];
+#fbp-book[bottom] <= #fbp[bottom];
+#fbp-book[left] >= 10;
+#fbp[left] == 0;
+#fbp {
+  background-image: url('../../assets/2013/paul-morrison.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#alankay-quote[height] == #alankay-quote[intrinsic-height];
+#alankay-quote[width] == #alankay[width] / 2;
+#alankay-quote[left] == #alankay[center-x] !weak;
+#alankay-quote[center-y] == #alankay[center-y] - #alankay[height] / 4 !weak;
+#alankay-quote[top] >= #alankay[top] + 10;
+#alankay-quote[right] <= #alankay[right] - 20 !weak;
+#alankay[left] == 0;
+#alankay {
+  background-image: url('../../assets/2013/alan-kay.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+
+#unixphilosophy-quote[height] == #unixphilosophy-quote[intrinsic-height] !weak;
+#unixphilosophy-quote[width] == #unixphilosophy[width] / 2;
+#unixphilosophy-quote[center-x] == #unixphilosophy[center-x];
+#unixphilosophy-quote[center-y] == #unixphilosophy[center-y];
+#unixphilosophy-quote[top] >= #unixphilosophy[top];
+#unixphilosophy-quote[bottom] <= #unixphilosophy[bottom];
+#unixphilosophy[left] == 0;
+#unixphilosophy {
+  background-image: url('../../assets/2013/usenix.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+#unixphilosophy-quote {
+  background-color: hsla(180, 11%, 11%, 0.95);
+  padding: 10px;
+  font-size: 20pt;
+}
+
+#meemoo-img[height] == #meemoo[height];
+#meemoo-img[width] == #meemoo[width];
+#meemoo-img[top] == #meemoo[top];
+#meemoo-img[center-x] == #meemoo[center-x];
+#meemoo-text[top] == #meemoo[top] + 100;
+#meemoo-text[center-x] == #meemoo[center-x];
+#meemoo-text[width] == #meemoo[width];
+#meemoo-text[height] == #meemoo-text[intrinsic-height];
+#meemoo {
+  background-color: #ffffff;
+}
+#meemoo-text {
+  color: #ffffff;
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+#cr-code[width] == #cr-code[intrinsic-width];
+#cr-code[height] == #cr-code[intrinsic-height];
+#cr-code[center-x] == #cr[center-x];
+#cr-code[center-y] == #cr[center-y];
+#cr[left] == 0;
+
+#cps-code[width] == #cps-code[intrinsic-width];
+#cps-code[height] == #cps-code[intrinsic-height];
+#cps-code[center-x] == #cps[center-x];
+#cps-code[center-y] == #cps[center-y];
+#cps[left] == 0;
+
+#xmas-code[width] == #xmas-code[intrinsic-width];
+#xmas-code[height] == #xmas-code[intrinsic-height];
+#xmas-code[center-x] == #xmas[center-x];
+#xmas-code[center-y] == #xmas[center-y];
+#xmas[left] == 0;
+
+#unixpipe-code[width] == #unixpipe-code[intrinsic-width];
+#unixpipe-code[height] == #unixpipe-code[intrinsic-height];
+#unixpipe-code[center-x] == #unixpipe[center-x];
+#unixpipe-code[center-y] == #unixpipe[center-y];
+#unixpipe[left] == 0;
+
+#fbp2d-text[width] == #fbp2d-text[intrinsic-width];
+#fbp2d-text[height] == #fbp2d-text[intrinsic-height];
+#fbp2d-text[center-x] == #fbp2d[width] / 3 * 2;
+#fbp2d-text[bottom] == #fbp2d[bottom] - #fbp2d[height] / 4;
+#fbp2d[left] == 0;
+#fbp2d {
+  background-image: url('../../assets/2013/noflo-calc.png');
+  background-size: 100% auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-color: #2a2b30;
+}
+#fbp2d-text {
+  text-shadow: 0px 0px 10px #2a2b30;
+}
+
+#underground {
+  background-image: url('../../assets/2013/underground-map.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #ffffff;
+}
+
+#theflo {
+  background-image: url('../../assets/2013/theflo.png');
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #000000;
+}
+
+#noflo-kickstarter {
+  background-image: url('../../assets/2013/noflo-kickstarter-finished.png');
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-color: #ecf0e9;
+}
+
+#why-now-text[width] == #why-now-text[intrinsic-width];
+#why-now-text[height] == #why-now-text[intrinsic-height];
+#why-now-text[center-x] == #why-now[center-x];
+#why-now-text[center-y] == #why-now[center-y];
+#why-now[left] == 0;
+#why-now-text {
+  font-size: 40pt;
+}
+
+#noflo-ipad {
+  background-image: url('../../assets/2013/noflo-ipad.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+}
+
+#roadtrip {
+  background-image: url('../../assets/2013/noflo-california-1.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+
+#noflo-clock-demo[width] == #noflo-clock[width] - 40;
+#noflo-clock-demo[height] == #noflo-clock[height] - 40;
+#noflo-clock-demo[center-x] == #noflo-clock[center-x];
+#noflo-clock-demo[center-y] == #noflo-clock[center-y];
+#noflo-clock[left] == 0;
+#noflo-clock {
+  background-color: #2a2b30;
+}
+#noflo-clock-demo {
+  border: none;
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+}
+
+#noflo-gesture-demo[width] == #noflo-gesture[width] - 40;
+#noflo-gesture-demo[height] == #noflo-gesture[height] - 40;
+#noflo-gesture-demo[center-x] == #noflo-gesture[center-x];
+#noflo-gesture-demo[center-y] == #noflo-gesture[center-y];
+#noflo-gesture[left] == 0;
+#noflo-gesture {
+  background-color: #1c1c1c;
+}
+#noflo-gesture-demo {
+  border: none;
+  transform: scale(.8);
+  -webkit-transform: scale(.8);
+}
+
+#website-text[bottom] == #website[bottom] - 100;
+#website-text[center-x] == #website[center-x];
+#website-text[width] == #website[width];
+#website-text[height] == #website-text[intrinsic-height];
+#website[left] == 0;
+#website {
+  background-image: url('../../assets/2013/noflo-website.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top left;
+}
+#website-text {
+  background-color: hsla(180, 11%, 11%, 0.8);
+  text-align: center;
+  padding: 10px;
+}

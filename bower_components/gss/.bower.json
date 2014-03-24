@@ -5,21 +5,26 @@
     "Dan Tocchini <d4@thegrid.io>"
   ],
   "description": "Grid Style Sheets Runtime",
-  "main": "browser/gss.js",
+  "main": [
+    "dist/gss.js",
+    "dist/gss.min.js",
+    "dist/worker.js",
+    "dist/worker.min.js"
+  ],
   "keywords": [
     "gss"
   ],
   "license": "MIT",
   "ignore": [
-    "components",
-    "node_modules",
-    "bower_components",
-    "src",
-    "lib",
-    "spec",
-    "style",
-    "demo",
-    "docs",
+    "/components",
+    "/node_modules",
+    "/bower_components",
+    ".gitignore",
+    "/src",
+    "/lib",
+    "/spec",
+    "/demo",
+    "/docs",
     "_layouts",
     "_includes",
     "_config.yml",
@@ -30,13 +35,14 @@
     "index.html",
     ".travis.yml"
   ],
-  "_release": "bfab465d5f",
+  "_release": "087439f116",
   "_resolution": {
     "type": "branch",
-    "branch": "gh-pages",
-    "commit": "bfab465d5f9ad5e20c2161820d7be9cc51ef0ae7"
+    "branch": "master",
+    "commit": "087439f116d87acf342f1c1c9e4fad61f64bb0f2"
   },
-  "_source": "git://github.com/the-gss/gss.git",
-  "_target": "gh-pages",
-  "_originalSource": "git://github.com/the-gss/gss.git"
+  "_source": "git://github.com/the-gss/engine.git",
+  "_target": "*",
+  "_originalSource": "gss",
+  "_direct": true
 }
