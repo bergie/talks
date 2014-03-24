@@ -1,6 +1,6 @@
 /* vim: set filetype=css: */
-.slide[width] == ::window[width];
-.slide[height] == ::window[height];
+.slide[width] == ::window[width] !strong;
+.slide[height] == ::window[height] !strong;
 
 @vertical .slide gap(0);
 
