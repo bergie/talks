@@ -72,7 +72,7 @@
 #drawfbp-img[center-x] == #drawfbp[center-x] !weak;
 #drawfbp-img[top] >= #drawfbp[top];
 #drawfbp-img[bottom] <= #drawfbp[bottom];
-#drawfbp-img[left] >= #drawfbp[left];
+#drawfbp-img[left] >= #drawfbp[left] !strong;
 #drawfbp-img[right] <= #drawfbp[right] !strong;
 #drawfbp-text[bottom] == #drawfbp[bottom] - 100;
 #drawfbp-text[center-x] == #drawfbp[center-x];
@@ -115,8 +115,8 @@
 #fbp-book[center-y] == #fbp[center-y] !weak;
 #fbp-book[top] >= #fbp[top];
 #fbp-book[bottom] <= #fbp[bottom];
-#fbp-book[left] >= 10;
-#fbp[left] == 0;
+#fbp-book[left] >= 10 !strong;
+#fbp[left] == 0 !strong;
 #fbp {
   background-image: url('../../assets/2013/paul-morrison.jpg');
   background-size: cover;
