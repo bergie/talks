@@ -7,12 +7,13 @@
   function next(slides) {
     currentSlide++;
     window.location.hash = '#' + currentSlide;
-  };
+  }
   var scrolling = false;
   var to;
   function scroll(slide) {
     var from = window.scrollY;
-    to = slide.offsetTop;
+    console.log(slide, JSON.stringify(slide.getBoundingClientRect()));
+    to = slide.getBoundingClientRect().top + window.pageYOffset;
     var step = Math.floor(Math.abs(to - from) / 10);
     var scrollStep = function () {
       var next;
@@ -36,7 +37,7 @@
       from = next;
     };
     window.requestAnimationFrame(scrollStep);
-  };
+  }
   document.addEventListener("DOMContentLoaded", function(event) {
     var slides = document.querySelectorAll('section.slide');
     if (!window.location.hash) {
@@ -70,7 +71,8 @@
     });
     window.addEventListener('resize', function (event) {
       setTimeout(function () {
-        window.scrollTo(0, slides[currentSlide].offsetTop);
+        var top = slides[currentSlide].getBoundingClientRect().top + window.pageYOffset;
+        window.scrollTo(0, top);
       }, 500);
     });
     document.addEventListener('keydown', function (event) {

@@ -4,6 +4,7 @@
 
 @vertical .slide gap(0);
 
+#cover[top] == 0;
 #cover-img[center-x] == #cover[center-x];
 #cover-img[center-y] == #cover[center-y];
 #cover-img[width] == #cover[width] / 2;
@@ -116,7 +117,7 @@
 #fbp-book[top] >= #fbp[top];
 #fbp-book[bottom] <= #fbp[bottom];
 #fbp-book[left] >= 10;
-#fbp[left] == 0;
+#fbp[right] == ::window[right];
 #fbp {
   background-image: url('../../assets/2013/paul-morrison.jpg');
   background-size: cover;
