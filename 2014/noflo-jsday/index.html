@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script>
+      window.GSS_CONFIG = {
+        worker: '../../bower_components/gss/dist/worker.min.js',
+        defaultStrength: 'weak'
+      };
+    </script>
+    <style type="text/css">
+      body {
+  margin: 0px;
+  padding: 0px;
+  background-color: hsla(0, 0%, 0%, 0.98);
+  color: hsl(180, 11%, 99%);
+  font-family: 'Cantarell', arial, serif;
+  user-select: none;
+}
+
+section h1 {
+  z-index: 1;
+  font-size: 30pt;
+  margin: 0px;
+  padding: 0px;
+}
+
+section blockquote {
+  font-style: italic;
+  font-size: 30pt;
+}
+section blockquote cite {
+  font-style: normal;
+  font-size: 20pt;
+}
+section blockquote cite:before {
+  content: "\2014";
+  margin-left: 1em;
+  margin-right: 1em;
+}
+
+section blockquote:before {
+  content: '\201C';
+}
+
+::-webkit-scrollbar {
+  width: 0px;
+  height: 0px;
+}
+#code_1 {
+  background-color: hsl(180, 11%, 99%);
+  color: hsla(0, 0%, 0%, 0.98);
+}
+
+#code_1_code {
+  font-size: 26pt;
+}
+#code_2 {
+  background-color: hsla(0, 0%, 0%, 0.98);
+  color: hsl(180, 11%, 99%);
+}
+
+#code_2_code {
+  font-size: 26pt;
+}
+#code_3 {
+  background-color: hsl(180, 11%, 99%);
+  color: hsla(0, 0%, 0%, 0.98);
+}
+
+#code_3_code {
+  font-size: 26pt;
+}
+#image_1 {
+  background-size: cover;
+}
+#image-image_1 {
+  background-size: cover;
+}
+#quote-image_1 {
+  background-size: cover;
+}
+#quote-image-center_1 {
+  background-size: cover;
+}
+
+#quote-image-center_1_quote {
+  background-color: hsla(180, 11%, 11%, 0.95);
+  padding: 10px;
+}
+#code_4 {
+  background-color: hsl(180, 11%, 99%);
+  color: hsla(0, 0%, 0%, 0.98);
+}
+
+#code_4_code {
+  font-size: 26pt;
+}
+#image_2 {
+  background-size: cover;
+}
+#image_3 {
+  background-size: cover;
+}
+#image_4 {
+  background-size: cover;
+}
+#image_5 {
+  background-size: cover;
+}
+#image-imagesquare_1 {
+  background-size: cover;
+}
+#image-image_2 {
+  background-size: cover;
+}
+#image_6 {
+  background-size: cover;
+}
+
+    </style>
+    <style type="text/gss">
+      /* vim: set filetype=css: */
+@vertical section gap(0);
+
+section {
+  x:>= 0 !require;
+  y:>= 0 !require;
+  width:== ::window[width];
+  height:== ::window[height];
+}
+
+[grid-unit] == 36;
+#cover-image_1_image {
+  center-x: == #cover-image_1[center-x];
+  center-y: == #cover-image_1[center-y];
+  width: <= #cover-image_1[width] / 2;
+  height: <= #cover-image_1[height] / 1.5;
+}
+
+#cover-image_1_headline {
+  center-x: == #cover-image_1[center-x];
+  width: == ::[intrinsic-width];
+  top: >= #cover-image_1_image[bottom] + [grid-unit];
+  bottom: <= #cover-image_1[bottom] !require;
+}
+#code_1_container {
+  center-x: == #code_1[center-x];
+  center-y: == #code_1[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+/*
+#code_1_headline {
+  center-x: == ::parent[center-x];
+  top: >= ::parent[top];
+  width: == ::window[width] / 2;
+  height: == ::[intrinsic-height];
+}
+#code_1_code {
+  center-x: == ::parent[center-x];
+  top: >= #code_1_headline[bottom] + [grid-unit];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+*/
+#code_2_container {
+  center-x: == #code_2[center-x];
+  center-y: == #code_2[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+/*
+#code_2_headline {
+  center-x: == ::parent[center-x];
+  top: >= ::parent[top];
+  width: == ::window[width] / 2;
+  height: == ::[intrinsic-height];
+}
+#code_2_code {
+  center-x: == ::parent[center-x];
+  top: >= #code_2_headline[bottom] + [grid-unit];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+*/
+#code_3_container {
+  center-x: == #code_3[center-x];
+  center-y: == #code_3[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+/*
+#code_3_headline {
+  center-x: == ::parent[center-x];
+  top: >= ::parent[top];
+  width: == ::window[width] / 2;
+  height: == ::[intrinsic-height];
+}
+#code_3_code {
+  center-x: == ::parent[center-x];
+  top: >= #code_3_headline[bottom] + [grid-unit];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+*/
+#image-image_1_image {
+  left: >= #image-image_1[left] + [grid-unit];
+  center-y: == #image-image_1[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+#two-images-square_1_image1 {
+  width: <= ::parent[width] / 3;
+  height: == ::[width];
+  right: == ::parent[center-x] - [grid-unit];
+  top: == ::parent[top] + [grid-unit];
+}
+#two-images-square_1_image2 {
+  width: <= ::parent[width] / 3;
+  height: == ::[width];
+  left: == ::parent[center-x] + [grid-unit];
+  bottom: == ::parent[bottom] - [grid-unit];
+}
+#quote-image_1_quote {
+  width: <= #quote-image_1[width] / 2;
+  height: >= ::[intrinsic-height];
+  top: >= #quote-image_1[top] + [grid-unit];
+  right: <= #quote-image_1[right] - [grid-unit];
+}
+#quote-image-center_1_quote {
+  width: <= #quote-image-center_1[width] / 2;
+  height: >= ::[intrinsic-height];
+  center-x: >= ::parent[center-x];
+  center-y: >= ::parent[center-y];
+}
+#code_4_container {
+  center-x: == #code_4[center-x];
+  center-y: == #code_4[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+/*
+#code_4_headline {
+  center-x: == ::parent[center-x];
+  top: >= ::parent[top];
+  width: == ::window[width] / 2;
+  height: == ::[intrinsic-height];
+}
+#code_4_code {
+  center-x: == ::parent[center-x];
+  top: >= #code_4_headline[bottom] + [grid-unit];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+*/
+#image-imagesquare_1_image {
+  right: <= #image-imagesquare_1[right] - [grid-unit];
+  center-y: == #image-imagesquare_1[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+#image-image_2_image {
+  left: >= #image-image_2[left] + [grid-unit];
+  center-y: == #image-image_2[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+#end-empty_1_headline {
+  center-x: == #end-empty_1[center-x];
+  center-y: == #end-empty_1[center-y];
+  width: == ::[intrinsic-width];
+  height: == ::[intrinsic-height];
+}
+
+    </style>
+    <link href='http://fonts.googleapis.com/css?family=Cantarell' rel='stylesheet'>
+    <link href="../../assets/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <script src="../../bower_components/gss/dist/gss.min.js"></script>
+    <!--<script src="../../assets/2014/slides.js"></script>-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+  </head>
+  <body>
+    <section id="cover-image_1">
+  <h1 id="cover-image_1_headline">Flow-Based Programming for JavaScript</h1>
+  <img id="cover-image_1_image" src="../../assets/2013/noflo-white.svg">
+</section>
+<section id="code_1">
+  <div id="code_1_container">
+    <h1 id="code_1_headline">Call-Return</h1>
+    <pre id="code_1_code">var value = someFunction(param);
+// Here we wait until this completes</pre>
+  </div>
+</section>
+<section id="code_2">
+  <div id="code_2_container">
+    <h1 id="code_2_headline">Continuation Passing Style</h1>
+    <pre id="code_2_code">someFunction(param, function (value) {
+  // Our callback gets called once the
+  // function completes
+});</pre>
+  </div>
+</section>
+<section id="code_3">
+  <div id="code_3_container">
+    <h1 id="code_3_headline">Callback Christmas Tree</h1>
+    <pre id="code_3_code">asncFunction1(function(err, result) {
+  asncFunction2(function(err, result) {
+    asncFunction3(function(err, result) {
+      asncFunction4(function(err, result) {
+        asncFunction5(function(err, result) {
+          // do something useful
+        })
+      })
+    })
+  })
+});</pre>
+  </div>
+</section>
+<section id="image_1" style="background-image: url('../../assets/2013/underground-map.png');"></section>
+<section id="image-image_1" style="background-image: url('../../assets/2013/paul-morrison.jpg');">
+  <img id="image-image_1_image" src="../../assets/2013/fbp-book.png" alt="The FBP book">
+</section>
+<section id="two-images-square_1">
+  <img id="two-images-square_1_image1" src="../../assets/2014/collator.png" alt="IBM Collator">
+  <img id="two-images-square_1_image2" src="../../assets/2014/flowchart.png" alt="">
+</section>
+<section id="quote-image_1" style="background-image: url('../../assets/2013/alan-kay.png');">
+  <blockquote id="quote-image_1_quote">I thought of objects being like biological cells and/or individual computers on a network, only able to communicate with messages</blockquote>
+</section>
+<section id="quote-image-center_1" style="background-image: url('../../assets/2013/usenix.jpg');">
+  <blockquote id="quote-image-center_1_quote">This is the Unix philosophy: 
+Write programs that do one thing and do it well. 
+Write programs to work together. 
+Write programs to handle text streams, because that is a universal interface.</blockquote>
+</section>
+<section id="code_4">
+  <div id="code_4_container">
+    <h1 id="code_4_headline">Unix shell &#8594; FBP in 1D</h1>
+    <pre id="code_4_code">$ ps -ef | grep firefox \
+  | grep -v grep \
+  | awk &#39;{print $2}&#39; \
+  | xargs kill -9</pre>
+  </div>
+</section>
+<section id="image_2" style="background-image: url('../../assets/2013/noflo-california-1.jpg');"></section>
+<section id="image_3" style="background-image: url('../../assets/2014/noflo-jekyll.png');"></section>
+<section id="image_4" style="background-image: url('../../assets/2014/noflo-photobooth.png');"></section>
+<section id="image_5" style="background-image: url('../../assets/2013/noflo-kickstarter-finished.png');"></section>
+<section id="image-imagesquare_1" style="background-image: url('../../assets/2014/noflo-gnome-ui.png');">
+  <img id="image-imagesquare_1_image" src="../../assets/2014/microflo-sim1.gif" alt="MicroFlo simulator">
+</section>
+<section id="image-image_2" style="background-image: url('../../assets/2014/ingress-table-render.jpg');">
+  <img id="image-image_2_image" src="../../assets/2014/ingress-table-test2.gif" alt="Ingress Table debugging">
+</section>
+<section id="image_6" style="background-image: url('../../assets/2014/flowhub-beta.png');"></section>
+<section id="end-empty_1">
+  <h1 id="end-empty_1_headline">Thank you</h1>
+</section>
+
+  </body>
+</html>
