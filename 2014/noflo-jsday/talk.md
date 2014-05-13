@@ -75,3 +75,6 @@ Write programs to handle text streams, because that is a universal interface.
 ![Ingress Table debugging](../../assets/2014/ingress-table-test2.gif)
 
 ![Flowhub public beta](../../assets/2014/flowhub-beta.png)
+
+* [noflojs.org](http://noflojs.org)
+* [flowhub.io](http://flowhub.io)

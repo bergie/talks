@@ -118,6 +118,20 @@ section blockquote:before {
 #image_6 {
   background-size: cover;
 }
+#end-list_1 ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+  text-align: center;
+}
+#end-list_1 ul li {
+  font-size: 60px;
+  line-height: 100px;
+}
+#end-list_1 a {
+  text-decoration: none;
+  color: hsl(180, 11%, 99%);
+}
 
     </style>
     <style type="text/gss">
@@ -267,11 +281,11 @@ section {
   width: == ::[intrinsic-width];
   height: == ::[intrinsic-height];
 }
-#end-empty_1_headline {
-  center-x: == #end-empty_1[center-x];
-  center-y: == #end-empty_1[center-y];
+#end-list_1_container {
   width: == ::[intrinsic-width];
   height: == ::[intrinsic-height];
+  center-x: == ::parent[center-x];
+  center-y: == ::parent[center-y];
 }
 
     </style>
@@ -355,8 +369,10 @@ Write programs to handle text streams, because that is a universal interface.</b
   <img id="image-image_2_image" src="../../assets/2014/ingress-table-test2.gif" alt="Ingress Table debugging">
 </section>
 <section id="image_6" style="background-image: url('../../assets/2014/flowhub-beta.png');"></section>
-<section id="end-empty_1">
-  <h1 id="end-empty_1_headline">Thank you</h1>
+<section id="end-list_1">
+  <div id="end-list_1_container">
+    <ul><li><a href="http://noflojs.org">noflojs.org</a></li><li><a href="http://flowhub.io">flowhub.io</a></li></ul>
+  </div>
 </section>
 
   </body>
