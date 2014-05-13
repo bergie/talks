@@ -39,7 +39,7 @@
     window.requestAnimationFrame(scrollStep);
   }
   document.addEventListener("DOMContentLoaded", function(event) {
-    var slides = document.querySelectorAll('section.slide');
+    var slides = document.querySelectorAll('section');
     if (!window.location.hash) {
       window.location.hash = '#0';
     }
@@ -65,7 +65,7 @@
         return;
       }
       scroll(slides[currentSlide]);
-    };
+    }
     window.addEventListener('hashchange', function (event) {
       processHash(event.newURL);
     });
